@@ -63,7 +63,7 @@ a:visited { color: #707; }
 html:after {
 	content: "";
 	opacity: 0.5;
-	background: url(/images/swamp.png);
+	background: url(/images/swamp.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
