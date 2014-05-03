@@ -59,6 +59,9 @@ a:visited { color: #707; }
 /* Site
 /*
 /*****************************************************************************/
+html {
+	overflow: hidden;
+}
 
 html:after {
 	content: "";
@@ -71,7 +74,7 @@ html:after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	position: absolute;
+	position: fixed;
 	z-index: -1;   
 }
 
@@ -82,6 +85,8 @@ html:after {
 	padding-top: 3em;
 	margin: 0px auto;
 	line-height: 1.5em;
+	height: 100%;
+	position: relative;
 }
 
 .site > .content {
@@ -89,6 +94,11 @@ html:after {
 	background-color: #eee;
 	border: solid 1em #eee;
 	border-radius: 20px;
+	overflow-y: scroll;
+	position: absolute;
+	bottom: 150px;
+	top: 180px;
+	width: 90%;
 }
 
 .h-center {

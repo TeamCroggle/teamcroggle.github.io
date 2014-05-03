@@ -21,7 +21,8 @@ In my opinion, the division of data (model), traversion strategy and operation a
 Last thing to mention is that I just hacked some code to enable the AgedAlligatorActors to be rotated.
 LibGdx made this easy again, after having found the correct place where to tell it to do the rotating.
 I had started to do this before in the old repository, but there I was following a completely different approach, causing me to write tons of useless and buggy code for it.
-If you want to compare: [old] vs [new] (you have to ignore the stuff I did in other files than AgedAlligatorActor.java)
+If you want to compare: [old] vs [new]  
+You have to ignore the stuff I did in other files than AgedAlligatorActor.java
 
 Oh! And I almost forgot!  
 This week we added [@Prgfx][prgfx] to our team.
