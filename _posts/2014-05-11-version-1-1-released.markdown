@@ -10,6 +10,7 @@ Hello Crogglers!
 We haven't written for the last few days, but that's only because there was so much exciting development being done!
 We have released version 1.1 of Croggle, which is the first major update since the ending of the PSE project.
 New in this release is the following:
+
 * Exchanged most of the alligator and egg graphics with new ones, courtesy of Iris
 * Added some gimp files to the repository for better ability to modify
 * Added new effects to be used in animations: Shader based recoloring and rotations
