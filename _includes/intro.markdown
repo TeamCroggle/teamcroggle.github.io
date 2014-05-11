@@ -5,4 +5,4 @@ It is based on the great game idea ["Alligator Eggs" by Bret Victor][worrydream]
 ![Screenshot of the game's main menu][screenshot]
 
 [worrydream]: http://worrydream.com/AlligatorEggs/
-[screenshot]: images/Croggle.png
+[screenshot]: images/Croggle.jpg
