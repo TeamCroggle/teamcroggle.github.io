@@ -78,6 +78,11 @@ html:after {
 	z-index: -1;   
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+
 .site {
 	font-size: 150%;
 	text-align: justify;
