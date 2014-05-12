@@ -16,7 +16,7 @@ Today, we finally received his answer!
 He was pretty quick for someone who does so many great things - although he didn't really go into detail...
 But read it yourself:
 
-![Screenshot of Bret's answer in my GMail inbox](images/permission-bret.png)
+![Screenshot of Bret's answer in my GMail inbox][screenshot]
 
 It is a really cool move of him, and we want to thank him here once again.
 Now we will reconsider our publishing strategy for the near future, and who knows?
@@ -26,3 +26,4 @@ That's it for today, though.
 See you soon!
 
 [bret]: http://worrydream.com/
+[screenshot]: /images/permission-bret.png
