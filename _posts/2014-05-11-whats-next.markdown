@@ -27,6 +27,9 @@ Concerning code:
 11. Add a lambda-only mode (parse lambda string and represent/simulate it witg alligators)
 12. Animated tutorials
 13. Exchange alligator graphics in achievement icons and avatars
+14. Add sounds
+15. Add "open jaw" and "egg shell breaking" graphics/animations
+16. Add more levels
 
 Other stuff:
 
