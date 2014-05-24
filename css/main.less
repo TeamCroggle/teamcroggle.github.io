@@ -82,7 +82,7 @@ html {
 	background: -o-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	background: -ms-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	background: radial-gradient(circle at 0 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
-	z-index: -1;
+	z-index: 0;
 }
 
 #background-right:after {
@@ -100,7 +100,7 @@ html {
 	background: -o-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	background: -ms-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	background: radial-gradient(circle at 100% 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
-	z-index: -1;
+	z-index: 0;
 }
 
 #site {
@@ -162,7 +162,7 @@ html {
 
 #footer, #footer-space {
 	display: block;
-	height: 100px;
+	height: 90px;
 	width: 100%;
 }
 
@@ -173,11 +173,24 @@ html {
 #footer {
 	position: fixed;
 	bottom: 0px;
-	background-color: @c-footer;
 	.half-width;
+	background-color: @c-footer;
+	
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0px;
+		height: 0px;
+		width: 100%;
+		.box-shadow(0 0 2px 2px @c-shadow);
+	}
 }
 
 #footer-content {
+	height: 100%;
+	background-color: @c-footer;
 	padding: @n-content-padding / 2;
 	& > * {
 		display: inline-block;
@@ -185,10 +198,7 @@ html {
 	}
 }
 
-/**
- * I've been playing around with differnt css features to realize a top-only,
- * trapezoid shadow as seen in the design. Unfortunately, this is the best I came up with
- */
+
 .top-shadow {
 	position: relative;
 	.box-shadow(0px 0px 2px 2px @c-shadow);
@@ -207,9 +217,10 @@ html {
 	background: -o-linear-gradient(bottom, transparent, @c-background 15%);
 	background: -moz-linear-gradient(bottom, transparent, @c-background 15%);
 	background: linear-gradient(to bottom, transparent, @c-background 15%);
+	z-index: 1;
 }
 
-// used for topshadow
+// used for right shadow
 .top-shadow:after {
 	content: " ";
 	position: absolute;
@@ -228,6 +239,7 @@ html {
 .pagination {
 	text-align: center;
 }
+
 /***********************************************************************
  * Mixins
  **********************************************************************/
