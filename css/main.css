@@ -188,6 +188,7 @@ body {
   background: -o-linear-gradient(bottom, transparent, #ffffff 15%);
   background: -moz-linear-gradient(bottom, transparent, #ffffff 15%);
   background: linear-gradient(to bottom, transparent, #ffffff 15%);
+  border-bottom: solid 2px #ffffff;
   z-index: 1;
 }
 .top-shadow:after {
@@ -202,6 +203,7 @@ body {
   background: -o-linear-gradient(bottom, transparent, #ffffff 15%);
   background: -moz-linear-gradient(bottom, transparent, #ffffff 15%);
   background: linear-gradient(to bottom, transparent, #ffffff 15%);
+  border-bottom: solid 2px #ffffff;
 }
 .pagination {
   text-align: center;
