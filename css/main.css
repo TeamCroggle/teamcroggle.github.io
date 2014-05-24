@@ -27,14 +27,31 @@ body {
   margin: 0px;
   padding: 0px;
 }
-html {
+#background-left {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 70%;
   background-image: url("/images/swamp.jpg");
   background-repeat: no-repeat;
   background-position: left top;
-  background-attachment: fixed;
   background-size: cover;
 }
-html:before {
+#background-right {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 70%;
+  background-image: url("/images/egypt.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+}
+#background-left:after {
   content: " ";
   position: fixed;
   display: inline-block;
@@ -47,9 +64,9 @@ html:before {
   background: -o-radial-gradient(0 0, circle cover, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
   background: -ms-radial-gradient(0 0, circle cover, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
   background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
-  z-index: -1;
+  z-index: 0;
 }
-html:after {
+#background-right:after {
   content: " ";
   position: fixed;
   display: inline-block;
@@ -62,7 +79,7 @@ html:after {
   background: -o-radial-gradient(100% 0, circle cover, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
   background: -ms-radial-gradient(100% 0, circle cover, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
   background: radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.1) 0%, #ffffff 50%);
-  z-index: -1;
+  z-index: 0;
 }
 #site {
   width: 50%;
@@ -119,7 +136,7 @@ html:after {
 #footer,
 #footer-space {
   display: block;
-  height: 100px;
+  height: 90px;
   width: 100%;
 }
 #footer-space {
@@ -128,21 +145,31 @@ html:after {
 #footer {
   position: fixed;
   bottom: 0px;
-  background-color: #ffffff;
   width: 50%;
   min-width: 480px;
+  background-color: #ffffff;
+}
+#footer:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 2px 2px rgba(3, 3, 3, 0.5);
+  -moz-box-shadow: 0 0 2px 2px rgba(3, 3, 3, 0.5);
+  box-shadow: 0 0 2px 2px rgba(3, 3, 3, 0.5);
 }
 #footer-content {
+  height: 100%;
+  background-color: #ffffff;
   padding: 20px;
 }
 #footer-content > * {
   display: inline-block;
   margin-right: 30px;
 }
-/**
- * I've been playing around with differnt css features to realize a top-only,
- * trapezoid shadow as seen in the design. Unfortunately, this is the best I came up with
- */
 .top-shadow {
   position: relative;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(3, 3, 3, 0.5);
@@ -161,6 +188,7 @@ html:after {
   background: -o-linear-gradient(bottom, transparent, #ffffff 15%);
   background: -moz-linear-gradient(bottom, transparent, #ffffff 15%);
   background: linear-gradient(to bottom, transparent, #ffffff 15%);
+  z-index: 1;
 }
 .top-shadow:after {
   content: " ";
