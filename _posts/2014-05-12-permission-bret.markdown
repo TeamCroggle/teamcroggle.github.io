@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Croggle now officially approved"
 date:   2014-05-12 20:57:14
 categories: bret victor

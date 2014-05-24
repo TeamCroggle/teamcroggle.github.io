@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "What's next?"
 date:   2014-05-11 12:34:27
 categories: development features

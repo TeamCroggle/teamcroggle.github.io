@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Current development"
 date:   2014-05-03 23:10:50
 categories: development croggle-base

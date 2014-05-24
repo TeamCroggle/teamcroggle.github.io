@@ -1,5 +1,14 @@
 name: Croggle
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 github: [Repository metadata]
 paginate: 5
+gems: ['jekyll-less']
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "post"

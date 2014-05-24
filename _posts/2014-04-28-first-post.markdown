@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "New project blog"
 date:   2014-04-28 18:18:02
 categories: jekyll update

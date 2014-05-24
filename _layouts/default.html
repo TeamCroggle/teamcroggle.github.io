@@ -14,37 +14,34 @@
 
 	</head>
 	<body>
-
-		<div class="site">
+		<div class ="site">
 			<div class="header">
 				<a href="/"><img id="header-logo" src="/favicon.ico" /></a>
-				<h1 class="title"><a href="/">{{ site.name }}</a></h1>
+				<h1><a href="/">{{ site.name }}</a></h1>
+				<h2><a href="">Blogposts</a></h2>
+				<h2><a href="/about.html">About</a></h2>
 			</div>
 			
 			<div class="content">
-				{% if page.url == '/index.html' %}
-					{% capture intro %}{% include intro.markdown %}{% endcapture %}
-					{{ intro  | markdownify}}
-				{% endif %}
 				{{ content }}
 			</div>
-
+			
 			<div class="footer">
-				<div class="h-center">
-					<div class="contact">
-						<p>
-							Team Croggle<br />
-						</p>
-					</div>
-					<div class="contact">
-						<p>
-							<a href="https://github.com/TeamCroggle">github.com/TeamCroggle</a><br />
-							<!-- <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br /> -->
-						</p>
-					</div>
+			<div class="h-center">
+				<div class="contact">
+					<p>
+						Team Croggle<br />
+					</p>
+				</div>
+				<div class="contact">
+					<p>
+						<a href="https://github.com/TeamCroggle">github.com/TeamCroggle</a><br />
+						<!-- <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br /> -->
+					</p>
 				</div>
 			</div>
 		</div>
-
+		<div id="footer-space"></div>
+		</div>
 	</body>
 </html>
