@@ -37,14 +37,37 @@ html, body {
 
 
 html {
+	
+}
+
+#background-left {
+	position: fixed;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 70%;
 	background-image: url("/images/swamp.jpg");
 	background-repeat:no-repeat;
 	background-position: left top;
-	background-attachment: fixed;
+	//background-attachment: fixed;
+	background-size: cover;
+}
+#background-right {
+	position: fixed;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 70%;
+	background-image: url("/images/egypt.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	//background-attachment: fixed;
 	background-size: cover;
 }
 
-html:before {
+#background-left:after {
 	content: " ";
 	position: fixed;
 	display: inline-block;
@@ -53,15 +76,16 @@ html:before {
 	top: 0px;
 	left: 0px;
 
-	background: -moz-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 50%);
-	background: -webkit-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: -o-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: -ms-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: radial-gradient(circle at 0 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	@percent: 50%;
+	background: -moz-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) @percent);
+	background: -webkit-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: -o-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: -ms-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: radial-gradient(circle at 0 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	z-index: -1;
 }
 
-html:after {
+#background-right:after {
 	content: " ";
 	position: fixed;
 	display: inline-block;
@@ -70,11 +94,12 @@ html:after {
 	top: 0px;
 	right: 0px;
 
-	background: -moz-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 50%);
-	background: -webkit-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: -o-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: -ms-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
-	background: radial-gradient(circle at 100% 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	@percent: 50%;
+	background: -moz-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) @percent);
+	background: -webkit-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: -o-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: -ms-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
+	background: radial-gradient(circle at 100% 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) @percent);
 	z-index: -1;
 }
 
