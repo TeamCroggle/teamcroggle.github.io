@@ -1,6 +1,239 @@
-@c-headings: #614d2c;
+@c-special: #614d2c;
+@c-links: @c-special;
+@c-headings: @c-special;
+@c-shadow: rgba(3,3,3,.5);
+@c-footer: #fff;
+@n-content-padding: 40px;
+@c-background: #fff;
 
 h1, h2, h3 {
 	color: @c-headings;
+	& > a {
+		color: @c-headings;
+		text-decoration: none;
+	}
 }
 
+a {
+	color: @c-links;
+}
+
+img {
+	max-width: 100%;
+}
+
+html {
+	font-style: normal;
+	font-family: "Droid Sans", "Arial", "sans-serif"
+}
+
+html, body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+html {
+	background-image: url("/images/swamp.jpg");
+	background-repeat:no-repeat;
+	background-position: left top;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+html:before {
+	content: " ";
+	position: fixed;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+
+	background: -moz-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 50%);
+	background: -webkit-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: -o-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: -ms-radial-gradient(0 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: radial-gradient(circle at 0 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	z-index: -1;
+}
+
+html:after {
+	content: " ";
+	position: fixed;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+
+	background: -moz-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 50%);
+	background: -webkit-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: -o-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: -ms-radial-gradient(100% 0, circle cover, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	background: radial-gradient(circle at 100% 0, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 50%);
+	z-index: -1;
+}
+
+#site {
+	.half-width;
+	margin-top: 100px;
+	.h-center;
+	position: relative;
+	display: block;
+}
+
+#header {
+	position: relative;
+	height: 120px;
+	& > * {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	
+	img {
+		height: 60px;
+	}
+}
+
+#navbar {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	margin: 0px;
+	& > * {
+		display: inline-block;
+	}
+}
+
+#content {
+	background-color: #fff;
+	padding: @n-content-padding;
+}
+
+#posts ul.posts {
+	padding-left: 0px;
+	& > li {
+		list-style-type: none;
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.meta {
+	color: @c-special;
+	&:before {
+		content: "\25a0";
+		color: @c-special;
+		margin-right: 3px;
+		vertical-align: 7%;
+	}
+}
+
+#footer, #footer-space {
+	display: block;
+	height: 100px;
+	width: 100%;
+}
+
+#footer-space {
+	position: relative;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0px;
+	background-color: @c-footer;
+	.half-width;
+}
+
+#footer-content {
+	padding: @n-content-padding / 2;
+	& > * {
+		display: inline-block;
+	}
+}
+
+/**
+ * I've been playing around with differnt css features to realize a top-only,
+ * trapezoid shadow as seen in the design. Unfortunately, this is the best I came up with
+ */
+.top-shadow {
+	position: relative;
+	.box-shadow(0px 0px 2px 2px @c-shadow);
+}
+
+// used for left shadow
+.top-shadow:before {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	left: -10px;
+	width: 10px;
+	height: 100%;
+	display: inline-block;
+	background: -webkit-linear-gradient(top, transparent, @c-background 15%);
+	background: -o-linear-gradient(bottom, transparent, @c-background 15%);
+	background: -moz-linear-gradient(bottom, transparent, @c-background 15%);
+	background: linear-gradient(to bottom, transparent, @c-background 15%);
+}
+
+// used for topshadow
+.top-shadow:after {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	right: -10px;
+	width: 10px;
+	height: 100%;
+	display: inline-block;
+	background: -webkit-linear-gradient(top, transparent, @c-background 15%);
+	background: -o-linear-gradient(bottom, transparent, @c-background 15%);
+	background: -moz-linear-gradient(bottom, transparent, @c-background 15%);
+	background: linear-gradient(to bottom, transparent, @c-background 15%);
+}
+
+
+.pagination {
+	text-align: center;
+}
+/***********************************************************************
+ * Mixins
+ **********************************************************************/
+.h-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.half-width {
+	width: 50%;
+	min-width: 480px;
+}
+
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.border-image(@args) {
+	-webkit-border-image: @args;
+	-o-border-image: @args;
+	border-image: @args;
+}
+ 
+.clearfix {
+	display: inline-block;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
