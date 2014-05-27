@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Updated GitHub releases - with downloads!"
 date:   2014-04-29 11:59:23
 categories: github release

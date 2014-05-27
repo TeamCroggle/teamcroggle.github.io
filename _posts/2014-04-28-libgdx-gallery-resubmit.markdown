@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Croggle resubmitted to libGdx gallery"
 date:   2014-04-28 22:55:47
 categories: libgdx gallery

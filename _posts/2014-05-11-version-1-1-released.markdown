@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Version 1.1 released"
 date:   2014-05-11 11:50:30
 categories: development release appartaward

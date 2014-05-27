@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Today's updates"
 date:   2014-05-04 14:18:50
 categories: development news

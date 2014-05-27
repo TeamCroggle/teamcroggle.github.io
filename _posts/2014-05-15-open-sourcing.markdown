@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Croggle now officially open source"
 date:   2014-05-15 22:32:14
 categories: opensource apachelicense development

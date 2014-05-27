@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "Croggle 1.1.1 bugfix release"
 date:   2014-05-22 14:18:44
 categories: release version 1.1.1 notes
