@@ -6,8 +6,9 @@ categories: release version 1.1.1 google play
 ---
 
 Hello folks!  
+
 Yes, we know: long time, no read. And we are sorry for that.  
-Since we are all heavily engaged in our studies which is why there hasn't been much time recently to be spent on development - nor on this blog.
+Since we are all heavily engaged in our studies there hasn't been much time recently to be spent on development - nor on this blog.
 But there are still little signs of life, one of which we want to announce in this post:  
 
 __Croggle is on Google Play store!__  
